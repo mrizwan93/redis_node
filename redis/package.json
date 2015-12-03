@@ -1,0 +1,22 @@
+{
+  "name": "redis",
+  "version": "0.0.0",
+  "description": "",
+  "main": "config.js",
+  "dependencies": {
+    "body-parser": "~1.14.1",
+    "express": "~4.13.3",
+    "gulp": "~3.9.0",
+    "gulp-nodemon": "~2.0.4",
+    "mongoose": "~4.2.8",
+    "morgan": "~1.6.1",
+    "redis": "~2.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
