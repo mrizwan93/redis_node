@@ -23,7 +23,7 @@ client.on('connect', function() {
         console.log('Redis is connected');
     });
 
-    client.lpush(['list','name','rizwan','nishant','vishal','nikhil'],function(err,doc){
+    client.lpush(['list', 'name', 'rizwan', 'nishant', 'vishal', 'nikhil', 'Amol'],function(err,doc){
         if(err){
             console.log(err);
         }else{
@@ -31,37 +31,37 @@ client.on('connect', function() {
         }
     });
 
-    client.rpush(['list','1','2','3','4'],function(err,doc){
+    client.rpush(['list', '1', '2', '3', '4', '5'],function(err,doc){
         if(err){
             console.log(err);
         }else{
-            console.log("set"+doc)
+            console.log("set"+ doc)
         }
     });
 
-    client.lrange('list',0,-1,function(err,doc){
+    client.lrange('list', 0, -1, function(err, doc){
         if(err){
             console.log(err);
         }else{
-            console.log("list : \n"+doc)
+            console.log("list : \n"+ doc)
         }
     });
 
     client.hmset('hashset', 'javascript', 'AngularJS', 'css', 'Bootstrap', 'node', 'Express');
 
     client.hgetall('hashset', function(err, object) {
-        console.log("Hash Set :\n"+object);
+        console.log("Hash Set :\n"+ object);
     });
 
-    client.sadd(['set','name','rizwan','nishant','vishal','nikhil'],function(err,doc){
+    client.sadd(['set', 'name', 'rizwan', 'nishant', 'vishal', 'nikhil'],function(err, doc){
         if(err){
             console.log(err);
         }else{
-            console.log("set : \n"+doc)
+            console.log("set : \n"+ doc)
         }
     });
 
-    client.smembers('set',function(err,doc){
+    client.smembers('set',function(err, doc){
         if(err){
             console.log(err);
         }else{
